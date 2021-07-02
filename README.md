@@ -1,2 +1,2 @@
 # BMI-Calculator
-a IBM calculator (HTML, CSS & JS)
+a BMI calculator (HTML, CSS & JS)

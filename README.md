@@ -1,2 +1,2 @@
-# BMI-Calculator
-a BMI calculator (HTML, CSS & JS)
+# Custom-Select-Box
+How to create the Custom Select Box Using HTML CSS and Jquery

@@ -1,39 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculateur d'IMC</title>
+	<meta charset="UTF-8">
+	<title>Custom Select Box</title>
+	<link rel="stylesheet" href="styles.css">
+	  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".default_option").click(function(){
+          $(this).parent().toggleClass("active");
+        })
+
+        $(".select_ul li").click(function(){
+          var currentele = $(this).html();
+          $(".default_option li").html(currentele);
+          $(this).parents(".select_wrap").removeClass("active");
+        })
+      });
+    </script>
+
+<script>
+  $(document).ready(function(){
+    $(".default_option2").click(function(){
+      $(this).parent().toggleClass("active");
+    })
+
+    $(".select_ul li").click(function(){
+      var currentele = $(this).html();
+      $(".default_option2 li").html(currentele);
+      $(this).parents(".select_wrap-type").removeClass("active");
+    })
+  });
+</script>
 </head>
+
 <body>
-    <div class="container">
-        <select name="
-        " id=""></select>
+  <header class="header">
+      <p>
+          Alexandre LEFEVRE <br>
+          contact@alexandre-lefevre.com
+      </p>
+    </header>
 
-        <div class="field age">
-            <label for="age" class="label-age">Quel est votre age ? </label>
-            <input type="text" class="btn-age">
-            ans
+  
+  <div class="container">
+    <h1>
+      1.) Recueil des informations
+    </h1>
+  
+      <div class="informations">
+        <!--
+        <div class="wrapper">
+          <div class="title">
+            Vous etes 
+          </div>
+          <div class="select_wrap">
+              <ul class="default_option">
+                  <li>
+                      <div class="option man">
+                        <div class="icon">
+                          <img src="image1.png" alt="" height="50px" width="80px">
+                        </div>
+                        <p>un homme</p>
+                      </div>
+                  </li>
+              </ul>
+              <ul class="select_ul">
+                <li>
+                  <div class="option woman">
+                    <div class="icon">
+                      <img src="image2.png" alt="" height="50px" width="80px">
+                    </div>
+                    <p>une femme</p>
+                  </div>  
+              </li>
+                  <li>
+                      <div class="option man">
+                        <div class="icon">
+                          <img src="image1.png" alt="" height="50px" width="80px">
+                        </div>
+                        <p>un homme</p>
+                      </div>
+                  </li>
+              </ul>
+                  
+          </div>
+          
+        </div>
+    -->
+        <div class="wrapper-informations">
+          <div class="field age">
+              <label for="age" class="label-age"><p class="txt">Quel est votre age ? </p></label>
+              <input type="text" class="btn-age">
+              <p class="unit">ans</p> 
+          </div>
+        
+          <div class="field height">
+              <label for="height" class="label-height"><p class="txt">Quel est votre taille ? </p></label>
+              <input type="number" class="btn-height">
+              <p class="unit">cm</p>  
+          </div>
+        
+          <div class="field weight">
+              <label for="age" class="label-weight"><p class="txt">Quel est votre poids actuel ? </p></label>
+              <input type="number" class="btn-weight">
+              <p class="unit">kg</p> 
+          </div>
+        
+          <div class="field goal">
+              <label for="age" class="label-"><p class="txt">Quel est votre OBJECTIF? </p></label>
+              <input type="number" class="btn-goal" id="btn-goal">
+              <p class="unit">ans</p> 
+          </div>
+
+          <button type="submit" id="submit">Soumettre</button>
+        </div>
+    <!--
+        <div class="wrapper-type">
+          <p>
+            Quel est votre type de morphologie ?
+          </p>
+          <div class="select_wrap-type">
+              <ul class="default_option2">
+                  <li>
+                      <div class="option Ectomorphe">
+                        <div class="icon">
+                          <img src="imagetype1.png" alt="" height="50px" width="80px">
+                        </div>
+                        <p>Ectomorphe</p>
+                      </div>
+                  </li>
+              </ul>
+              <ul class="select_ul">
+                <li>
+                  <div class="option Ectomorphe">
+                    <div class="icon">
+                      <img src="imagetype1.png" alt="" height="50px" width="80px">
+                    </div>
+                    <p>Ectomorphe</p>
+                  </div>  
+              </li>
+                  <li>
+                      <div class="option Mésomorphe">
+                        <div class="icon">
+                          <img src="imagetype2.png" alt="" height="50px" width="80px">
+                        </div>
+                        <p>Mésomorphe</p>
+                      </div>
+                  </li>
+                  <li>
+                    <div class="option Endomorphe">
+                      <div class="icon">
+                        <img src="imagetype3.png" alt="" height="50px" width="80px">
+                      </div>
+                      <p>Endomorphe</p>
+                    </div>  
+                </li>
+              </ul>
+                  
+          </div>
+        -->
+          
+        </div>
+      </div>
+    <h2>
+      2.) Affichage des résultats
+    </h2>
+
+      <div class="results">
+        <div class="table">
+          <div class="cell morbide">
+            <p>
+              Obésité morbide
+            </p>
+          </div>
+          <div class="cell severe">
+            <p>
+              Obésité sévère
+            </p>
+          </div>
+          <div class="cell commune">
+            <p>
+              Obésité commune
+            </p>
+          </div>
+          <div class="cell important">
+           <p>
+            Surpoids important
+           </p>
+          </div>
+          <div class="cell modere">
+            <p>
+              Surpoids modéré
+            </p>
+          </div>
+          <div class="cell forme">
+            <p>
+              Votre poids de forme
+            </p>
+          </div>
+          <div class="cell faible">
+            <p>
+              Poids trop faible
+            </p>
+          </div>
         </div>
 
-        <div class="field height">
-            <label for="height" class="label-height">Quel est votre taille ? </label>
-            <input type="number" cls="btn-height">
-            cm 
-        </div>
+        <div class="cursor" id="cursor">
 
-        <div class="field weight">
-            <label for="age" class="label-present-height">Quel est votre taille ? </label>
-            <input type="number" cls="btn-weight">
-            kg
-        </div>
 
-        <div class="field poids-">
-            <label for="age" class="label-">Quel est votre taille ? </label>
-            <input type="number" cls="btn-poids">
-            kg
+          <script>
+            let cursor = document.getElementById("cursor");
+            let btn_goal = document.getElementById("btn-goal");
+            let submit = document.getElementById("submit");
+
+
+            submit.addEventListener ("click", function(){
+              cursor.style.bottom = btn_goal.value + "px";
+   
+            })
+            
+          </script>
         </div>
-    </div>
+      </div>
+  </div>
 </body>
 </html>

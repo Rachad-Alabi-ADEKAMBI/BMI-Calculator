@@ -3,40 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Calculateur d'IMC</title>
-  
 	<link rel="stylesheet" href="styles.css">
-	  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script>
-      $(document).ready(function(){
-        $(".default_option").click(function(){
-          $(this).parent().toggleClass("active");
-        })
-
-        $(".select_ul li").click(function(){
-          var currentele = $(this).html();
-          $(".default_option li").html(currentele);
-          $(this).parents(".select_wrap").removeClass("active");
-        })
-      });
-    </script>
-     <script
-     src="https://kit.fontawesome.com/b14771b76e.js"
-     crossorigin="anonymous"
-   ></script>
-
-<script>
-  $(document).ready(function(){
-    $(".default_option2").click(function(){
-      $(this).parent().toggleClass("active");
-    })
-
-    $(".select_ul li").click(function(){
-      var currentele = $(this).html();
-      $(".default_option2 li").html(currentele);
-      $(this).parents(".select_wrap-type").removeClass("active");
-    })
-  });
-</script>
+  <script
+      src="https://kit.fontawesome.com/b14771b76e.js"
+      crossorigin="anonymous"
+    ></script>
 </head>
 
 <body>
@@ -55,44 +26,17 @@
   
       <div class="informations">
         <!--
-        <div class="wrapper">
-          <div class="title">
-            Vous etes 
-          </div>
-          <div class="select_wrap">
-              <ul class="default_option">
-                  <li>
-                      <div class="option man">
-                        <div class="icon">
-                          <img src="image1.png" alt="" height="50px" width="80px">
-                        </div>
-                        <p>un homme</p>
-                      </div>
-                  </li>
-              </ul>
-              <ul class="select_ul">
-                <li>
-                  <div class="option woman">
-                    <div class="icon">
-                      <img src="image2.png" alt="" height="50px" width="80px">
-                    </div>
-                    <p>une femme</p>
-                  </div>  
-              </li>
-                  <li>
-                      <div class="option man">
-                        <div class="icon">
-                          <img src="image1.png" alt="" height="50px" width="80px">
-                        </div>
-                        <p>un homme</p>
-                      </div>
-                  </li>
-              </ul>
-                  
-          </div>
-          
+        <div class="gender" id="gender">
+          <select class="select-gender" id="select-gender">
+            <option style="background-image:url(/image2.png);">une femme</option>
+            <option style="background-image:url(/image1.png);">un homme</option>
+            <option style="background-image:url(/image2.png);">une femme</option>
+          </select>
         </div>
-    -->
+        -->
+
+         
+    
         <div class="wrapper-informations">
           <div class="field age">
               <label for="age" class="label-age"><p class="txt">Quel est votre age ? </p></label>
@@ -220,7 +164,10 @@
         </div>
 
         <div class="cursor" id="cursor">
-            <p class="cursor-text" id="cursor-text"> <i class="fas fa-arrow-left"> </i>Votre objectif: <span id="arrow-goal"></span> kg </i> </p>                
+            <p class="cursor-text" id="cursor-text"> 
+              <i class="fas fa-arrow-left"> </i>Votre objectif:
+               <span id="arrow-goal"></span> kg 
+            </p>                
         </div>
       </div>
   </div>

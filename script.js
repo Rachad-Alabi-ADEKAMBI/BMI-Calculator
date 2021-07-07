@@ -20,3 +20,5 @@
       cursor_weight.style.bottom = btn_weight.value*5.5 + "px";
       cursor_weight_element.innerHTML = btn_weight.value;
       cursor_weight_text.style.display = "block";
+
+    })

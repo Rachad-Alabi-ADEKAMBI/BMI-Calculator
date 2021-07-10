@@ -25,7 +25,7 @@
     </h1>
   
       <div class="informations">
-        <!--
+        
         <div class="gender" id="gender">
           <select class="select-gender" id="select-gender">
             <option style="background-image:url(/image2.png);">une femme</option>
@@ -33,7 +33,6 @@
             <option style="background-image:url(/image2.png);">une femme</option>
           </select>
         </div>
-        -->
 
          
     
@@ -59,59 +58,21 @@
           <div class="field goal">
               <label for="age" class="label-"><p class="txt">Quel est votre OBJECTIF? </p></label>
               <input type="number" class="btn-goal" id="btn-goal">
-              <p class="unit">ans</p> 
+              <p class="unit">kg</p> 
           </div>
         </div>
 
-        <button type="submit"  class="submit" id="submit">Mon poids de forme</button>
-    <!--
-        <div class="wrapper-type">
-          <p>
-            Quel est votre type de morphologie ?
-          </p>
-          <div class="select_wrap-type">
-              <ul class="default_option2">
-                  <li>
-                      <div class="option Ectomorphe">
-                        <div class="icon">
-                          <img src="imagetype1.png" alt="" height="50px" width="80px">
-                        </div>
-                        <p>Ectomorphe</p>
-                      </div>
-                  </li>
-              </ul>
-              <ul class="select_ul">
-                <li>
-                  <div class="option Ectomorphe">
-                    <div class="icon">
-                      <img src="imagetype1.png" alt="" height="50px" width="80px">
-                    </div>
-                    <p>Ectomorphe</p>
-                  </div>  
-              </li>
-                  <li>
-                      <div class="option Mésomorphe">
-                        <div class="icon">
-                          <img src="imagetype2.png" alt="" height="50px" width="80px">
-                        </div>
-                        <p>Mésomorphe</p>
-                      </div>
-                  </li>
-                  <li>
-                    <div class="option Endomorphe">
-                      <div class="icon">
-                        <img src="imagetype3.png" alt="" height="50px" width="80px">
-                      </div>
-                      <p>Endomorphe</p>
-                    </div>  
-                </li>
-              </ul>
-                  
-          </div>
-        -->
-          
+        <div class="gender" id="gender">
+          <select class="select-gender" id="select-gender">
+            <option value="ectomorphe">Ectomorphe</option>
+            <option value="mesomorphe">Mesomorphe</option> 
+            <option value="endomorphe">Endomorphe</option>
+          </select>
         </div>
-      </div>
+
+        <button type="submit"  class="submit" id="submit">Mon poids de forme</button>
+    
+          </div>
     <h2>
       2.) Affichage des résultats
     </h2>
@@ -126,37 +87,43 @@
 
         <div class="table">
           <div class="cell morbide">
-            <span>+</span><p>
+            <span id="poids7"></span>
+            <p>
               Obésité morbide
             </p>
           </div>
           <div class="cell severe">
-            <span>90</span> <p>
+            <span id="poids6"></span>
+            <p>
               Obésité sévère
             </p>
           </div>
           <div class="cell commune">
-            <span>80</span><p>
+            <span id="poids5"></span>
+            <p>
               Obésité commune
             </p>
           </div>
           <div class="cell important">
-            <span>70</span><p>
+            <span id="poids4"></span>
+            <p>
             Surpoids important
            </p>
           </div>
           <div class="cell modere">
-            <span>57</span><p>
+            <span id="poids3"></span>
+            <p>
               Surpoids modéré
             </p>
           </div>
           <div class="cell forme">
-            <span>53</span><p>
+            <span id="poids2"></span>
+            <p>
               Votre poids de forme
             </p>
           </div>
           <div class="cell faible">
-            <span>50</span>
+            <span id="poids1"></span>
             <p>
               Poids trop faible
             </p>

@@ -46,6 +46,7 @@ h2{
   height: auto;
   flex-direction: column;
   margin:50px auto;
+  text-align: center;
   padding-top: 50px;
   border: 1px black solid;
   position: relative;
@@ -110,12 +111,17 @@ input{
   height: 40px;
   border-radius: 20px;
   color: white;
+  cursor: pointer;
   font-weight: bold;
   background-color: rgb(180, 211, 118);
-  margin: auto auto 30px auto;
+  margin: 30px auto 30px auto;
   border: none;
 }
 
+.submit:hover{
+  background-color: #FF0000;
+  color: white;
+}
 
 /*results*/
 .results{
@@ -123,7 +129,7 @@ input{
   flex-direction: row;
   text-align: center;
   margin: auto;
-  height: 650px;
+  height: 550px;
   width: 620px;
   margin: 50px auto 50px auto;
   position: relative;
@@ -131,14 +137,14 @@ input{
 
 .table{
   margin:100px auto 0 200px;
-  height: 550px;
+  height: 450px;
   width: 200px;
 }
 
 .cell{
   margin: 0;
   width: 100%;
-  height: 100px;
+  height: 50px;
   text-align: center;
   color: black;
   display: table;
@@ -152,44 +158,37 @@ input{
 }
 
 .cell span{
-  left:170px;
+  left:10px;
   position: absolute;
 }
 
 .morbide{
   background-color: #D20039;
-  height: 55px;
   
 }
 
 .severe{
   background-color: #FF0000;
-  height: 55px;
 }
 
 .commune{
   background-color: #FF5000;
-  height: 55px;
 }
 
 .important{
-  height: 72px;
   background-color: #FF9909;;
 }
 
 .modere{
   background-color: #FFC911;
-  height: 22px;
 }
 
 .forme{
   background-color: #9EFF00;
-  height: 16px;
 }
 
 .faible{
   background-color: #FF9909;
-  height: 275px;
 }
 
 .cursor{
@@ -205,6 +204,7 @@ input{
   width: 250px;
   height: 20px;
   background-color: aqua;
+  display: none;
 }
 
 .cursor p i{
@@ -225,4 +225,5 @@ input{
   height: 20px;
   background-color:#C18CE5;
   padding-right: 0;
+  display: none;
 }
